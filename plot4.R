@@ -38,4 +38,5 @@ plot(1:len, data$Global_reactive_power, type="l", xaxt="n", xlab="datetime", yla
 axis(side="1", at=c(0,len/2,len), labels=c("Thu","Fri","Sat"))
 ## Restore default parameters and Save the result
 par(cex=1.0)
+par(mfcol=c(1,1))
 dev.off()
