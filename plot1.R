@@ -1,7 +1,7 @@
 library(data.table)
 # Download, unpack and read data
-#download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile="power_consumption.zip", method="curl")
-#unzip("power_consumption.zip")
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile="power_consumption.zip", method="curl")
+unzip("power_consumption.zip")
 data <- fread("household_power_consumption.txt")
 
 # Coerce casting
