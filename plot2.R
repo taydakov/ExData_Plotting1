@@ -16,7 +16,9 @@ data$Sub_metering_3        <- sapply(data$Sub_metering_3,        as.numeric, USE
 # Subset only to 2007-02-01 and 2007-02-02
 data <- data[which(data$Date == "1/2/2007" | data$Date == "2/2/2007"),]
 
+# Draw and save the graphics
+len <- length(data$Global_active_power)
 png("plot2.png", width=480, height=480, units="px")
-plot(1:length(data$Global_active_power), data$Global_active_power, type="l", xaxt="n", xlab="", ylab="Global Active Power (kilowatts)")
-axis(side="1", at=c(0,1440,2880), labels=c("Thu","Fri","Sat"))
+plot(1:len, data$Global_active_power, type="l", xaxt="n", xlab="", ylab="Global Active Power (kilowatts)")
+axis(side="1", at=c(0,len/2,len), labels=c("Thu","Fri","Sat"))
 dev.off()
